@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Flamenco:wght@300;400&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Flamenco:wght@300;400&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+body{
+  margin: 50px;
+  background-image: url(imagens/fire.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+}
+
+a{
+  text-decoration: none;
+  margin-inline: 12px;
+  color: #000000;
+}
+
+.menus{
+  margin-top: 18px;
+}
+
+.menus a{
+  color: #ffffff;
+}
+
+.menus .aba:hover{
+  border-bottom: 2.5px solid #ffffff;
+}
+
+.menus .aba.ativa {
+  border-bottom: 2.5px solid #ffffff; 
+}
+
+.titulo{
+  display: flex;
+  align-items: center;
+  margin-top: -83px;
+  color: #ffffff;
+}
+
+.titulo img{
+  height: 200px;
+  width: 200px;
+}
+
+.titulo h3{
+  margin-left: -60px;
+  margin-top: 38px;
+}
+
+.principal h1{
+  font-family: 'Flamenco', sans-serif;
+  color: #e23308;
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.principal p{
+  font-family: 'Cinzel Decorative', sans-serif;
+  color: #ee8c03;
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+button{
+  padding: 11px 8px;
+  border-radius: 5px;
+  background-color: #e2e208;
+}
+
+/* Spinner e overlay */
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8); /* Fundo branco semi-transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Spinner simples */
+.loading::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(0, 0, 0, 0.2);
+  border-top-color: #4285f4; /* Azul do Google */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Animação de rotação */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Mostrar o spinner */
+.loading.active {
+  visibility: visible;
+  opacity: 1;
+}
